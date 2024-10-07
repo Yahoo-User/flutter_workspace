@@ -3,14 +3,8 @@ import 'package:flutter/material.dart';
 import '../util/logger.dart';
 
 
-/*
- * =====================================
- * ( dart:ui )  typedef VoidCallback = void Function()
- * =====================================
- * Signature of callbacks that have no arguments and return no data.
- *
- */
 class MainAppBar extends StatelessWidget {
+    // ( dart:ui )  typedef VoidCallback = void Function()
     final VoidCallback? onPickBackgroundImage;
     final VoidCallback? onSaveMergedImage;
     final VoidCallback? onDeleteSticker;
@@ -49,7 +43,7 @@ class MainAppBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
 
                 children: <StatelessWidget>[
-                    IconButton( onPressed: onPickBackgroundImage, icon: const Icon(Icons.image_search_outlined, color: Colors.red) ),
+                    IconButton(onPressed: onPickBackgroundImage, icon: const Icon(Icons.image_search_outlined, color: Colors.red) ),
                     IconButton(onPressed: onSaveMergedImage, icon: const Icon(Icons.save, color: Colors.green)),
                     IconButton(onPressed: onDeleteSticker, icon: const Icon(Icons.delete_forever_outlined, color: Colors.blue)),
                 ],

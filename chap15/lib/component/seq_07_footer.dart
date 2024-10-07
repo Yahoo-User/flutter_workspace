@@ -44,8 +44,8 @@ class Footer extends StatelessWidget {
 
 
     const Footer({
-        required this.onEmoticonTap,
         super.key,
+        required this.onEmoticonTap,
     });
 
     @override
@@ -65,10 +65,12 @@ class Footer extends StatelessWidget {
 
                         ( index ) => Padding(     // generator
                             key: Key('Padding-$index') ,
+
                             padding: const EdgeInsets.symmetric( horizontal: 8.0, vertical: .0 ),
 
                             child: GestureDetector(
                                 onTap: () => onEmoticonTap(index + 1),
+
                                 child: Image.asset( 'assets/img/emoticon_${index + 1}.png', height: 70 ),
                             ),
                         ),
